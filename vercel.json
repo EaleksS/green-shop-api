@@ -1,3 +1,10 @@
 {
-	"routes": [{ "src": "/(.*)", "dest": "/cmd" }]
+	"buildCommand": "go build -o cmd/main",
+	"routes": [
+		{
+			"handle": "filesystem",
+			"src": "/(. * )",
+			"dest": "/index.html"
+		}
+	]
 }
